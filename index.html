@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertise Smart Art</title>
+    <title>Expertise Pictorial Representation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,63 +15,77 @@
             min-height: 100vh;
             margin: 0;
         }
-        .smart-art {
-            width: 80%;
-            max-width: 800px;
+        .diagram {
+            width: 90%;
+            max-width: 1000px;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
-        .category {
+        .node {
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            transition: transform 0.2s;
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
         }
-        .category:hover {
-            transform: translateY(-5px);
+        .node:hover {
+            transform: translateY(-10px);
         }
-        .category-title {
+        .node-title {
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 10px;
             color: #007bff;
         }
-        .category-content {
+        .node-content {
             line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .node {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 500px) {
+            .node {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="smart-art">
-        <div class="category">
-            <div class="category-title">Expertise Area</div>
-            <div class="category-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
+    <div class="diagram">
+        <div class="node">
+            <div class="node-title">Expertise Area</div>
+            <div class="node-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
         </div>
-        <div class="category">
-            <div class="category-title">Math Fundamentals</div>
-            <div class="category-content">Statistics, Probability & Random Processes, Linear Algebra</div>
+        <div class="node">
+            <div class="node-title">Math Fundamentals</div>
+            <div class="node-content">Statistics, Probability & Random Processes, Linear Algebra</div>
         </div>
-        <div class="category">
-            <div class="category-title">Programming Languages</div>
-            <div class="category-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
+        <div class="node">
+            <div class="node-title">Programming Languages</div>
+            <div class="node-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
         </div>
-        <div class="category">
-            <div class="category-title">Technical Electives</div>
-            <div class="category-content">Entrepreneurship, Design Thinking</div>
+        <div class="node">
+            <div class="node-title">Technical Electives</div>
+            <div class="node-content">Entrepreneurship, Design Thinking</div>
         </div>
-        <div class="category">
-            <div class="category-title">Communication Skills</div>
-            <div class="category-content">Effective written and verbal communication, & presentation skills</div>
+        <div class="node">
+            <div class="node-title">Communication Skills</div>
+            <div class="node-content">Effective written and verbal communication, & presentation skills</div>
         </div>
-        <div class="category">
-            <div class="category-title">Research & Insight Development</div>
-            <div class="category-content">Skilled in qualitative/quantitative research, survey analysis, hypothesis testing, data synthesis, and insight generation</div>
+        <div class="node">
+            <div class="node-title">Research & Insight Development</div>
+            <div class="node-content">Skilled in qualitative/quantitative research, survey analysis, hypothesis testing, data synthesis, and insight generation</div>
         </div>
-        <div class="category">
-            <div class="category-title">Survey Analysis & Collaborative Research</div>
-            <div class="category-content">Extensive survey analysis, collaborative research, delivering data-driven, impactful outputs</div>
+        <div class="node">
+            <div class="node-title">Survey Analysis & Collaborative Research</div>
+            <div class="node-content">Extensive survey analysis, collaborative research, delivering data-driven, impactful outputs</div>
         </div>
     </div>
 </body>
