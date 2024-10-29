@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #f4f1e8;
             color: #333;
             display: flex;
             justify-content: center;
@@ -18,86 +18,62 @@
         .diagram {
             width: 90%;
             max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-        }
-        .smart-art {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding: 10px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s;
-        }
-        .smart-art:hover {
-            transform: translateY(-10px);
         }
         .node {
-            flex: 1;
-            padding: 15px;
+            padding: 20px;
+            background-color: #faf7f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
             text-align: center;
+        }
+        .node:hover {
+            transform: translateY(-10px);
         }
         .node-title {
             font-weight: bold;
             font-size: 1.4em;
             margin-bottom: 10px;
-            color: #007bff;
+            color: #b08f5c;
         }
         .node-content {
             line-height: 1.6;
         }
         @media (max-width: 768px) {
-            .smart-art {
-                flex-direction: column;
-                gap: 10px;
+            .diagram {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="diagram">
-        <div class="smart-art">
-            <div class="node">
-                <div class="node-title">Expertise Area</div>
-                <div class="node-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
-            </div>
-            <div class="node">
-                <div class="node-title">Math Fundamentals</div>
-                <div class="node-content">Statistics, Probability & Random Processes, Linear Algebra</div>
-            </div>
+        <div class="node">
+            <div class="node-title">Expertise Area</div>
+            <div class="node-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
         </div>
-        <div class="smart-art">
-            <div class="node">
-                <div class="node-title">Programming Languages</div>
-                <div class="node-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
-            </div>
-            <div class="node">
-                <div class="node-title">Technical Electives</div>
-                <div class="node-content">Entrepreneurship, Design Thinking</div>
-            </div>
+        <div class="node">
+            <div class="node-title">Math Fundamentals</div>
+            <div class="node-content">Statistics, Probability & Random Processes, Linear Algebra</div>
         </div>
-        <div class="smart-art">
-            <div class="node">
-                <div class="node-title">Communication Skills</div>
-                <div class="node-content">Effective written and verbal communication, & presentation skills</div>
-            </div>
-            <div class="node">
-                <div class="node-title">Research & Insight Development</div>
-                <div class="node-content">Skilled in qualitative/quantitative research, survey analysis, hypothesis testing, data synthesis, and insight generation</div>
-            </div>
+        <div class="node">
+            <div class="node-title">Programming Languages</div>
+            <div class="node-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
         </div>
-        <div class="smart-art">
-            <div class="node">
-                <div class="node-title">Survey Analysis & Collaborative Research</div>
-                <div class="node-content">Extensive survey analysis, collaborative research, delivering data-driven, impactful outputs</div>
-            </div>
+        <div class="node">
+            <div class="node-title">Technical Electives</div>
+            <div class="node-content">Entrepreneurship, Design Thinking</div>
+        </div>
+        <div class="node">
+            <div class="node-title">Communication Skills</div>
+            <div class="node-content">Effective Written and Verbal Communication, & Presentation Skills</div>
+        </div>
+        <div class="node">
+            <div class="node-title">Research & Insight Development</div>
+            <div class="node-content">Skilled in Qualitative/Quantitative Research, Hypothesis Testing, Data Synthesis, and Insight Generation</div>
         </div>
     </div>
 </body>
