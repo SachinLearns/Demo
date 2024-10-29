@@ -17,28 +17,36 @@
         }
         .diagram {
             width: 90%;
-            max-width: 1000px;
+            max-width: 1200px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            gap: 30px;
             justify-content: center;
+            align-items: center;
+        }
+        .smart-art {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        .smart-art:hover {
+            transform: translateY(-10px);
         }
         .node {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: calc(33% - 20px);
-            box-sizing: border-box;
-            transition: transform 0.3s;
+            flex: 1;
+            padding: 15px;
             text-align: center;
-        }
-        .node:hover {
-            transform: translateY(-10px);
         }
         .node-title {
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1.4em;
             margin-bottom: 10px;
             color: #007bff;
         }
@@ -46,46 +54,50 @@
             line-height: 1.6;
         }
         @media (max-width: 768px) {
-            .node {
-                width: calc(50% - 20px);
-            }
-        }
-        @media (max-width: 500px) {
-            .node {
-                width: 100%;
+            .smart-art {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="diagram">
-        <div class="node">
-            <div class="node-title">Expertise Area</div>
-            <div class="node-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
+        <div class="smart-art">
+            <div class="node">
+                <div class="node-title">Expertise Area</div>
+                <div class="node-content">Machine Learning, Deep Learning, Data Science, Generative AI, LLMs</div>
+            </div>
+            <div class="node">
+                <div class="node-title">Math Fundamentals</div>
+                <div class="node-content">Statistics, Probability & Random Processes, Linear Algebra</div>
+            </div>
         </div>
-        <div class="node">
-            <div class="node-title">Math Fundamentals</div>
-            <div class="node-content">Statistics, Probability & Random Processes, Linear Algebra</div>
+        <div class="smart-art">
+            <div class="node">
+                <div class="node-title">Programming Languages</div>
+                <div class="node-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
+            </div>
+            <div class="node">
+                <div class="node-title">Technical Electives</div>
+                <div class="node-content">Entrepreneurship, Design Thinking</div>
+            </div>
         </div>
-        <div class="node">
-            <div class="node-title">Programming Languages</div>
-            <div class="node-content">Proficient in Python; Experience with C/C++, MATLAB, R</div>
+        <div class="smart-art">
+            <div class="node">
+                <div class="node-title">Communication Skills</div>
+                <div class="node-content">Effective written and verbal communication, & presentation skills</div>
+            </div>
+            <div class="node">
+                <div class="node-title">Research & Insight Development</div>
+                <div class="node-content">Skilled in qualitative/quantitative research, survey analysis, hypothesis testing, data synthesis, and insight generation</div>
+            </div>
         </div>
-        <div class="node">
-            <div class="node-title">Technical Electives</div>
-            <div class="node-content">Entrepreneurship, Design Thinking</div>
-        </div>
-        <div class="node">
-            <div class="node-title">Communication Skills</div>
-            <div class="node-content">Effective written and verbal communication, & presentation skills</div>
-        </div>
-        <div class="node">
-            <div class="node-title">Research & Insight Development</div>
-            <div class="node-content">Skilled in qualitative/quantitative research, survey analysis, hypothesis testing, data synthesis, and insight generation</div>
-        </div>
-        <div class="node">
-            <div class="node-title">Survey Analysis & Collaborative Research</div>
-            <div class="node-content">Extensive survey analysis, collaborative research, delivering data-driven, impactful outputs</div>
+        <div class="smart-art">
+            <div class="node">
+                <div class="node-title">Survey Analysis & Collaborative Research</div>
+                <div class="node-content">Extensive survey analysis, collaborative research, delivering data-driven, impactful outputs</div>
+            </div>
         </div>
     </div>
 </body>
